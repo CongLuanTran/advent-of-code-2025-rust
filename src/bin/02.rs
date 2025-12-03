@@ -48,7 +48,6 @@ fn main() -> Result<()> {
         Ok(invalids.iter().sum())
     }
 
-    // TODO: Set the expected answer for the test input
     assert_eq!(1227775554, part1(BufReader::new(TEST.as_bytes()))?);
 
     let input_file = BufReader::new(File::open(INPUT_FILE)?);
