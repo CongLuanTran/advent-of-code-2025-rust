@@ -1,3 +1,5 @@
+#![allow(unexpected_cfgs)]
+
 use adv_code_2025::*;
 use anyhow::*;
 use code_timing_macros::time_snippet;
@@ -8,7 +10,8 @@ use std::io::{BufRead, BufReader};
 const DAY: &str = "01";
 const INPUT_FILE: &str = concatcp!("input/", DAY, ".txt");
 
-const TEST: &str = r"L68
+const TEST: &str = "\
+L68
 L30
 R48
 L5
@@ -17,7 +20,8 @@ L55
 L1
 L99
 R14
-L82";
+L82
+";
 
 fn main() -> Result<()> {
     start_day(DAY);
